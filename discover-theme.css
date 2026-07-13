@@ -1,0 +1,333 @@
+/* --- Base Reset & Pure Dark Theme --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #121212; 
+  color: #ffffff;
+  padding: 20px;
+}
+
+/* --- 1. Horizontal Carousel Container --- */
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+}
+.carousel-container::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for a clean look */
+}
+
+/* --- Card Architecture (Horizontal Layout) --- */
+.play-card {
+  min-width: 400px;
+  max-width: 400px;
+  background-color: #202020; /* Dark grey for cards */
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  flex: none; /* Prevents cards from shrinking */
+}
+
+/* --- Card Image & Badge --- */
+.play-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px; 
+}
+.play-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #2a2a2a; 
+}
+.play-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: #ffffff;
+  color: #202124;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.badge-purple {
+  background-color: #e8dff5; 
+}
+
+/* --- Card Text Content --- */
+.play-card-content {
+  padding: 20px 20px 8px 20px;
+}
+.play-card-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.play-card-subtitle {
+  font-size: 14px;
+  color: #9aa0a6;
+}
+
+/* --- Card Footer (App Info & Buttons) --- */
+.play-card-footer {
+  padding: 12px 20px 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+}
+.play-app-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+  background-color: #333;
+}
+.play-app-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.play-app-name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.play-app-dev {
+  font-size: 12px;
+  color: #9aa0a6;
+  margin-bottom: 2px;
+}
+.play-app-status {
+  font-size: 12px;
+  color: #9aa0a6;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* --- Button Styles --- */
+.play-btn {
+  background-color: #3f3f3f; 
+  color: #ffffff;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.play-btn:hover {
+  background-color: #4f4f4f;
+}
+
+.play-action-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.play-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.play-btn-split-main {
+  background-color: #3f3f3f;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px 4px 4px 20px; 
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.play-btn-split-arrow {
+  background-color: #3f3f3f;
+  color: #ffffff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 4px 20px 20px 4px; 
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.play-btn-split-main:hover,
+.play-btn-split-arrow:hover {
+  background-color: #4f4f4f;
+}
+.play-iap-text {
+  font-size: 9px;
+  color: #9aa0a6;
+  text-align: center;
+}
+
+/* =========================================
+   2. CATEGORY COLLECTIONS (From your image)
+   ========================================= */
+.collections-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.collection-card {
+  position: relative;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.collection-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Custom gradient backgrounds matching the image */
+.ent-bg { background: linear-gradient(135deg, #71e0c4, #2a8cc8); }
+.music-bg { background: linear-gradient(135deg, #a19ae9, #f78bb0); }
+.social-bg { background: linear-gradient(135deg, #5da2f0, #967de3); }
+
+/* The 3D Image floating in the middle */
+.collection-img {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 90px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* The curved dark background for text */
+.collection-info {
+  background-color: #242424;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Creates the convex curve on top of the dark section */
+.collection-info::before {
+  content: '';
+  position: absolute;
+  top: -15px; 
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #242424;
+  border-radius: 50% 50% 0 0;
+  z-index: -1;
+}
+
+.collection-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.collection-sub {
+  font-size: 13px;
+  color: #aaaaaa;
+  opacity: 0.8;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 900px) {
+  .collections-section {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+  }
+  .collection-card {
+    min-width: 280px;
+    scroll-snap-align: start;
+    flex: none;
+  }
+}
+/* 1. Reduce size of the Horizontal Offers (Monsoon/GTA/Microsoft 365) */
+.offer-banner {
+    min-width: 400px; /* Reduced width */
+    height: 180px;    /* Reduced height to be less overpowering */
+    object-fit: cover;
+    border-radius: 12px;
+    scroll-snap-align: start;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* 2. Compact the Entertainment/Music/Social Collections */
+.collection-card {
+    height: 140px;    /* Reduced from 180px to make them smaller */
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* 3. Scale down the icons inside those collection cards */
+.collection-img {
+    position: absolute;
+    top: 5px; /* Moved up slightly */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px; /* Smaller icon size */
+    object-fit: contain;
+    z-index: 1;
+}
+
+/* 4. Adjust the bottom text area of the collection cards */
+.collection-info-box {
+    background-color: #242424;
+    padding: 10px; /* Reduced padding */
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* 5. Adjust the curve on top of the text box */
+.collection-info-box::before {
+    top: -10px; 
+    height: 20px;
+}
+/* --- Force Compact Sizes --- */
+.offer-banner {
+    min-width: 400px !important;
+    height: 180px !important;
+}
+
+.collection-card {
+    height: 140px !important;
+}
+
+.collection-img {
+    height: 50px !important;
+    top: 5px !important;
+}
+
+.collection-info-box {
+    padding: 10px !important;
+}
