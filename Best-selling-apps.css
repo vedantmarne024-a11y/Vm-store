@@ -1,0 +1,72 @@
+/* Best Selling Apps */
+
+.best-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+.best-card{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.best-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.15);
+}
+
+.best-card img{
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.best-card .info{
+    flex: 1;
+}
+
+.best-card h4{
+    margin: 0 0 5px;
+    font-size: 17px;
+}
+
+.best-card p{
+    color: #666;
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+
+.best-card span{
+    color: gold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.best-card strong{
+    color: #0078d4;
+    font-size: 15px;
+}
+
+/* Tablet */
+@media (max-width: 992px){
+    .best-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+    .best-grid{
+        grid-template-columns: 1fr;
+    }
+}
