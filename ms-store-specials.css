@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #202020;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.app-section {
+    max-width: 1400px;
+    margin: 0 auto 40px auto;
+}
+
+.section-header h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrow {
+    color: #ff8c00;
+    margin-left: 8px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* ======================================= */
+/* TOP PAID APPS (Vertical Cards)          */
+/* ======================================= */
+.cards-row {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.cards-row::-webkit-scrollbar {
+    display: none;
+}
+
+.app-card {
+    min-width: 148px;
+    width: 148px;
+    height: 224px;
+    background: #2b2b2b;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.app-card:hover {
+    background: #333333;
+}
+
+.card-top {
+    height: 125px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-top img {
+    width: 68px;
+    height: 68px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card-bottom {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 125px);
+    position: relative;
+}
+
+.card-bottom h3 {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.price-pill {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+/* ======================================= */
+/* APPS SPECIALS (Wide 2-Row Grid)         */
+/* ======================================= */
+.specials-grid {
+    display: grid;
+    /* Forces exactly 2 rows */
+    grid-template-rows: repeat(2, 1fr);
+    /* Auto generates columns flowing to the right */
+    grid-auto-flow: column;
+    /* Sets the width of each wide card */
+    grid-auto-columns: 320px; 
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+}
+
+.specials-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.wide-card {
+    background: #2b2b2b;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 12px;
+    height: 85px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.wide-card:hover {
+    background: #333333;
+}
+
+.wide-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.wide-info {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.wide-info h4 {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+}
+
+.wide-info p {
+    font-size: 11px;
+    color: #a0a0a0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.discount-block {
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+
+.yellow-tag {
+    background: #fce100;
+    color: #000;
+    font-weight: 700;
+    font-size: 11px;
+    text-align: center;
+    padding: 2px 0;
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.price-line {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+    font-size: 10px;
+    width: 100%;
+}
+
+.old-strike {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.new-text {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* ======================================= */
+/* COLLECTIONS (Vertical Downward Scroll)  */
+/* ======================================= */
+.collections-vertical-scroll {
+    display: flex;
+    flex-direction: column; /* Stacks banners vertically */
+    gap: 15px;
+    max-height: 450px; /* Adjust this height to control when it scrolls */
+    overflow-y: auto; /* Enables downward scrolling */
+    padding-right: 10px; /* Space for the scrollbar */
+}
+
+/* Custom scrollbar for Collections section */
+.collections-vertical-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+.collections-vertical-scroll::-webkit-scrollbar-track {
+    background: #202020;
+}
+.collections-vertical-scroll::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+.collection-img {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    background: #2b2b2b; /* Placeholder color if image is missing */
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0; /* Prevents banners from shrinking */
+}

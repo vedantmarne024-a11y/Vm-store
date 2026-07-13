@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft Store - Specials & Collections</title>
+<link rel="stylesheet" href="ms-store-specials.css">
+
+<!-- ADDED: This style block shrinks the banners at the bottom -->
+<style>
+    .OFFERS-vertical-scroll {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers the smaller banners */
+    }
+    .collection-img {
+        max-width: 75%; /* Reduces the size of the banners */
+        height: auto;
+        border-radius: 12px;
+        margin-bottom: 20px; /* Adds space between the scrolling banners */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+</style>
+</head>
+<body>
+
+<!-- ======================================= -->
+<!-- TOP PAID APPS SECTION                   -->
+<!-- ======================================= -->
+<section class="app-section">
+    <div class="section-header">
+        <h2>Top paid apps <span class="arrow">›</span></h2>
+    </div>
+
+    <div class="cards-row">
+        <!-- Card 1 -->
+        <div class="app-card">
+            <div class="card-top" style="background: linear-gradient(135deg, #001e36, #004d80);">
+                <img src="lightroom.jpg" alt="Adobe Lightroom">
+            </div>
+            <div class="card-bottom">
+                <h3>Adobe Lightroom</h3>
+                <span class="price-pill">Paid</span>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="app-card">
+            <div class="card-top" style="background: #3234cf;">
+                <img src="typing12.jpg" alt="TypingMagic 12" style="box-shadow: none;">
+            </div>
+            <div class="card-bottom">
+                <h3>TypingMagic 12</h3>
+                <span class="price-pill">Paid</span>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="app-card">
+            <div class="card-top" style="background: #ec3131;">
+                <img src="typing-master.jpg" alt="" style="box-shadow: none;">
+            </div>
+            <div class="card-bottom">
+                <h3>Typing Master 12</h3>
+                <span class="price-pill">Paid</span>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="app-card">
+            <div class="card-top" style="background: linear-gradient(135deg, #1e0036, #4d0080);">
+                <img src="premiere.jpg" alt="Premiere Elements">
+            </div>
+            <div class="card-bottom">
+                <h3>Adobe Premiere Elements 2026</h3>
+                <span class="price-pill">Paid</span>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="app-card">
+            <div class="card-top" style="background: linear-gradient(135deg, #a60f0f, #d32f2f);">
+                <img src="expressvpn.jpg" alt="ExpressVPN">
+            </div>
+            <div class="card-bottom">
+                <h3>ExpressVPN</h3>
+                <span class="price-pill">Paid</span>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="app-card">
+            <div class="card-top" style="background: linear-gradient(135deg, #b38b00, #ffcc00);">
+                <img src="cyberghost.jpg" alt="CyberGhost VPN">
+            </div>
+            <div class="card-bottom">
+                <h3>CyberGhost VPN</h3>
+                <span class="price-pill">Paid</span>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="app-card">
+            <div class="card-top" style="background: linear-gradient(135deg, #00364d, #0080b3);">
+                <img src="phootoshop.jpg" alt="Photoshop Elements">
+            </div>
+            <div class="card-bottom">
+                <h3>Adobe Photoshop Elements 2026</h3>
+                <span class="price-pill">Paid</span>
+            </div>
+        </div>
+
+        <!-- NEW Card 8 -->
+        <div class="app-card">
+            <div class="card-top" style="background: linear-gradient(135deg, #1a1a1a, #4a4a4a);">
+                <img src="flstudio.jpg" alt="FL Studio">
+            </div>
+            <div class="card-bottom">
+                <h3>FL Studio Mobile</h3>
+                <span class="price-pill">Paid</span>
+            </div>
+        </div>
+
+        <!-- NEW Card 9 -->
+        <div class="app-card">
+            <div class="card-top" style="background: linear-gradient(135deg, #2a004d, #5900b3);">
+                <img src="affinity.jpg" alt="Affinity Photo 2">
+            </div>
+            <div class="card-bottom">
+                <h3>Affinity Photo 2</h3>
+                <span class="price-pill">Paid</span>
+            </div>
+        </div>
+
+        <!-- NEW Card 10 -->
+        <div class="app-card">
+            <div class="card-top" style="background: linear-gradient(135deg, #004d1a, #009933);">
+                <img src="cccore.jpg" alt="CorelDRAW">
+            </div>
+            <div class="card-bottom">
+                <h3>CorelDRAW Graphics</h3>
+                <span class="price-pill">Paid</span>
+            </div>
+        </div>
+    </div> 
+</section> 
+
+<!-- ======================================= -->
+<!-- APPS SPECIALS SECTION                   -->
+<!-- ======================================= -->
+<section class="app-section">
+    <div class="section-header">
+        <h2>Apps specials <span class="arrow">›</span></h2>
+    </div>
+
+    <!-- 2-Row Horizontal Scroll Grid -->
+    <div class="specials-grid">
+        
+        <!-- Column 1, Row 1 -->
+        <div class="wide-card">
+            <img src="4k-wallpapers.jpg" alt="4K Wallpapers" class="wide-icon">
+            <div class="wide-info">
+                <h4>4K Wallpapers :Desktop HD...</h4>
+                <p>Personalization</p>
+            </div>
+            <div class="discount-block">
+                <div class="yellow-tag">-100%</div>
+                <div class="price-line"><span class="old-strike">₹ 824.00</span> <span class="new-text">Free</span></div>
+            </div>
+        </div>
+
+        <!-- Column 1, Row 2 -->
+        <div class="wide-card">
+            <img src="pdf-editor.jpg" alt="PDF Editor" class="wide-icon">
+            <div class="wide-info">
+                <h4>PDF Editor: PDF Reader,PDF...</h4>
+                <p>Productivity</p>
+            </div>
+            <div class="discount-block">
+                <div class="yellow-tag">-100%</div>
+                <div class="price-line"><span class="old-strike">₹ 3,749.00</span> <span class="new-text">Free</span></div>
+            </div>
+        </div>
+
+        <!-- Column 2, Row 1 -->
+        <div class="wide-card">
+            <img src="merge-pdf.jpg" alt="Merge PDF" class="wide-icon">
+            <div class="wide-info">
+                <h4>Merge PDF: Combine PDF files</h4>
+                <p>Productivity</p>
+            </div>
+            <div class="discount-block">
+                <div class="yellow-tag">-100%</div>
+                <div class="price-line"><span class="old-strike">₹ 824.00</span> <span class="new-text">Free</span></div>
+            </div>
+        </div>
+
+        <!-- Column 2, Row 2 -->
+        <div class="wide-card">
+            <img src="t.jpg" alt="Torrex Pro" class="wide-icon">
+            <div class="wide-info">
+                <h4>Torrex Pro - Torrent...</h4>
+                <p>Utilities & t...</p>
+            </div>
+            <div class="discount-block">
+                <div class="yellow-tag">-29%</div>
+                <div class="price-line"><span class="old-strike">₹ 1,049.00</span> <span class="new-text">₹ 749.00</span></div>
+            </div>
+        </div>
+
+        <!-- Column 3, Row 1 -->
+        <div class="wide-card">
+            <img src="8zip.jpg" alt="8 Zip Pro" class="wide-icon">
+            <div class="wide-info">
+                <h4>8 Zip Pro - advanced archiver...</h4>
+                <p>Utilities & to...</p>
+            </div>
+            <div class="discount-block">
+                <div class="yellow-tag">-15%</div>
+                <div class="price-line"><span class="old-strike">₹ 824.00</span> <span class="new-text">₹ 704.00</span></div>
+            </div>
+        </div>
+
+        <!-- Column 3, Row 2 -->
+        <div class="wide-card">
+            <img src="rarebirder.jpg" alt="RareBirder" class="wide-icon">
+            <div class="wide-info">
+                <h4>RareBirder</h4>
+                <p>Kids & family</p>
+            </div>
+            <div class="discount-block">
+                <div class="yellow-tag">-73%</div>
+                <div class="price-line"><span class="old-strike">₹ 549.00</span> <span class="new-text">₹ 149.00</span></div>
+            </div>
+        </div>
+
+        <!-- Column 4, Row 1 -->
+        <div class="wide-card">
+            <img src="xml-hub.jpg" alt="XML Hub" class="wide-icon">
+            <div class="wide-info">
+                <h4>XML Hub</h4>
+                <p>Developer to...</p>
+            </div>
+            <div class="discount-block">
+                <div class="yellow-tag">-85%</div>
+                <div class="price-line"><span class="old-strike">₹ 749.00</span> <span class="new-text">₹ 109.00</span></div>
+            </div>
+        </div>
+
+        <!-- Column 4, Row 2 -->
+        <div class="wide-card">
+            <img src="csv-hub.jpg" alt="CSV Hub" class="wide-icon">
+            <div class="wide-info">
+                <h4>CSV Hub</h4>
+                <p>Developer tools</p>
+            </div>
+            <div class="discount-block">
+                <div class="yellow-tag">-84%</div>
+                <div class="price-line"><span class="old-strike">₹ 749.00</span> <span class="new-text">₹ 119.00</span></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ======================================= -->
+<!-- COLLECTIONS SECTION (Downward Scroll)   -->
+<!-- ======================================= -->
+<section class="app-section">
+    <div class="section-header">
+        <h2>OFFERS <span class="arrow">›</span></h2>
+    </div>
+
+    <!-- Vertical scroll container for multiple banners -->
+    <div class="OFFERS-vertical-scroll">
+        <!-- Add as many images here as you want; they will scroll downward -->
+        <img src="rain.jpeg" alt="Collection Banner 1" class="collection-img">
+        <img src="6.jpeg" alt="Collection Banner 2" class="collection-img">
+        <img src="365.jpeg" alt="Collection Banner 3" class="collection-img">
+    </div>
+</section>
+
+</body>
+</html>
